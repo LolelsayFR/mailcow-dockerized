@@ -186,6 +186,8 @@ services:
         - CLUSTERMODE=${CLUSTERMODE:-}
         - ADDITIONAL_SERVER_NAMES=${ADDITIONAL_SERVER_NAMES:-}
       restart: always
+      ports:
+        - 127.0.0.1:8080:8080
       labels:
         ofelia.enabled: "true"
         ofelia.job-exec.phpfpm_keycloak_sync.schedule: "0 * * * * *"
